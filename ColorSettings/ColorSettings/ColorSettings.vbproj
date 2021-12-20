@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DBD95BD6-D504-4A63-8A91-C5ED093F1776}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Sub Main</StartupObject>
+    <RootNamespace>ColorSettings</RootNamespace>
+    <AssemblyName>ColorSettings</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Text</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ColorSettings.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ColorSettings.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ColorGeneral" />
+    <Import Include="ColorGeneral.colorallglib" />
+    <Import Include="ColorGeneral.colorhilflib" />
+    <Import Include="ColorGeneral.ColorMathlib" />
+    <Import Include="ColorMeasure" />
+    <Import Include="ColorParamLIB" />
+    <Import Include="ColorParamLIB.dbhilfprogramme" />
+    <Import Include="ColorReadWriteDaten" />
+    <Import Include="ColorService" />
+    <Import Include="ColorSettingsNET" />
+    <Import Include="ColorStructures" />
+    <Import Include="GeneralLibrary" />
+    <Import Include="GeneralLibrary.auxiliary" />
+    <Import Include="GeneralLibrary.BitsAndBytes" />
+    <Import Include="GeneralLibrary.DataBasisAndTables" />
+    <Import Include="GeneralLibrary.SQLQueryLIB" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.OleDb" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.IO" />
+    <Import Include="System.Math" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmCheckRelations.Designer.vb">
+      <DependentUpon>frmCheckRelations.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckRelations.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorDbCopy.designer.vb">
+      <DependentUpon>frmColorDbCopy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorDbCopy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorDbDelete.designer.vb">
+      <DependentUpon>frmColorDbDelete.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorDbDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorDBStructure.designer.vb">
+      <DependentUpon>frmColorDBStructure.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorDBStructure.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorSet.Designer.vb">
+      <DependentUpon>frmColorSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMessAdjust.designer.vb">
+      <DependentUpon>frmMessAdjust.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMessAdjust.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNormlicht.Designer.vb">
+      <DependentUpon>frmNormlicht.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNormlicht.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSST.Designer.vb">
+      <DependentUpon>frmSST.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSST.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWriteMessgMisch.Designer.vb">
+      <DependentUpon>frmWriteMessgMisch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWriteMessgMisch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modColorSet.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmCheckRelations.resx">
+      <DependentUpon>frmCheckRelations.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorDbCopy.resx">
+      <DependentUpon>frmColorDbCopy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorDbDelete.resx">
+      <DependentUpon>frmColorDbDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorDBStructure.resx">
+      <DependentUpon>frmColorDBStructure.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorSet.resx">
+      <DependentUpon>frmColorSet.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMessAdjust.resx">
+      <DependentUpon>frmMessAdjust.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNormlicht.resx">
+      <DependentUpon>frmNormlicht.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSST.resx">
+      <DependentUpon>frmSST.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWriteMessgMisch.resx">
+      <DependentUpon>frmWriteMessgMisch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="colorfile.INI">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ColorGeneral\ColorGeneral.vbproj">
+      <Project>{123FAC32-3CD0-49BB-AEA9-45D98FF73493}</Project>
+      <Name>ColorGeneral</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ColorMeasure\ColorMeasure.vbproj">
+      <Project>{66458D56-3A8D-42A3-A0B2-C9F0833DEB54}</Project>
+      <Name>ColorMeasure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ColorParamLib\ColorParamLib.vbproj">
+      <Project>{2DB15E92-2154-4BCD-8643-C042F883342E}</Project>
+      <Name>ColorParamLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ColorReadWriteDaten\ColorReadWriteDaten.vbproj">
+      <Project>{7BE511BA-F44D-4132-852D-5F716D1BFBA3}</Project>
+      <Name>ColorReadWriteDaten</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ColorService\ColorService.vbproj">
+      <Project>{5D50EEA4-D49B-483B-891A-DC10D56C4F4C}</Project>
+      <Name>ColorService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ColorSettingsNET\ColorSettingsNET\ColorSettingsNET.vbproj">
+      <Project>{34C84439-B57B-49F9-BA79-437EDFD7A2E7}</Project>
+      <Name>ColorSettingsNET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ColorStructures\ColorStructures.vbproj">
+      <Project>{9A27D4D9-1710-4871-9FA7-EE5E81AF4E1E}</Project>
+      <Name>ColorStructures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\GeneralLibrary\GeneralLibrary.vbproj">
+      <Project>{a9f3d1f4-ba26-48b8-be4d-ecbdc2d08891}</Project>
+      <Name>GeneralLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

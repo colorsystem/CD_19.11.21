@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08A1206C-4138-4533-A406-E26BFF6BE4AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>ColorBasisProg</RootNamespace>
+    <AssemblyName>ColorBasisProg</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Text</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>.\</OutputPath>
+    <DocumentationFile>ColorBasisProg.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DocumentationFile>ColorBasisProg.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Report.4, Version=4.6.20113.54459, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Chart.4, Version=4.0.20113.21313, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1Chart3D.4, Version=4.0.20113.21313, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1Chart3D.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Report.4, Version=4.6.20113.54459, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1TrueDBGrid.4, Version=4.0.20113.61237, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1TrueDBGrid.4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="C1.C1Report" />
+    <Import Include="C1.Win.C1TrueDBGrid" />
+    <Import Include="ColorCalculation" />
+    <Import Include="ColorGeneral" />
+    <Import Include="ColorGeneral.allglib" />
+    <Import Include="ColorGeneral.colorallglib" />
+    <Import Include="ColorGeneral.colorhilflib" />
+    <Import Include="ColorGeneral.mathlib" />
+    <Import Include="ColorGeneral.sqlquerylib" />
+    <Import Include="ColorMeasure" />
+    <Import Include="ColorParamLIB" />
+    <Import Include="Colorparamlib.DBHilfprogramme" />
+    <Import Include="ColorParamLIB.frbhilfprogramme" />
+    <Import Include="ColorReadWriteDaten" />
+    <Import Include="ColorService" />
+    <Import Include="ColorStructures" />
+    <Import Include="GeneralLibrary" />
+    <Import Include="GeneralLibrary.Auxiliary" />
+    <Import Include="GeneralLibrary.BitsandBytes" />
+    <Import Include="GeneralLibrary.DatabasisAndTables" />
+    <Import Include="GeneralLibrary.listtextid" />
+    <Import Include="GeneralLibrary.Mathematic" />
+    <Import Include="GeneralLibrary.SQLQueryLib" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.OleDb" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing.Drawing2D" />
+    <Import Include="System.Drawing.Printing" />
+    <Import Include="System.IO" />
+    <Import Include="System.math" />
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsColorBasis.vb" />
+    <Compile Include="frmBlockverarbeitungKorr.designer.vb">
+      <DependentUpon>frmBlockverarbeitungKorr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBlockverarbeitungKorr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBlockverarbeitungRefl.designer.vb">
+      <DependentUpon>frmBlockverarbeitungRefl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBlockverarbeitungRefl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChargenNuancieren.designer.vb">
+      <DependentUpon>frmChargenNuancieren.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChargenNuancieren.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorBlockverarbeitung.designer.vb">
+      <DependentUpon>frmColorBlockverarbeitung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorBlockverarbeitung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorDrucken.designer.vb">
+      <DependentUpon>frmColorDrucken.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorDrucken.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorGrund.designer.vb">
+      <DependentUpon>frmColorGrund.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorGrund.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorRaumBerechnung.designer.vb">
+      <DependentUpon>frmColorRaumBerechnung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorRaumBerechnung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorRezepte.Designer.vb">
+      <DependentUpon>frmColorRezepte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorRezepte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorSuchKorr.designer.vb">
+      <DependentUpon>frmColorSuchKorr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorSuchKorr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorthekEing.Designer.vb">
+      <DependentUpon>frmColorthekEing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmColorthekEing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConvertMisch.Designer.vb">
+      <DependentUpon>frmConvertMisch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmConvertMisch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDARF.designer.vb">
+      <DependentUpon>frmDARF.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDARF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDARZ.designer.vb">
+      <DependentUpon>frmDARZ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDARZ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDBExportCOL.designer.vb">
+      <DependentUpon>frmDBExportCOL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDBExportCOL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDBImportCOL.designer.vb">
+      <DependentUpon>frmDBImportCOL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmDBImportCOL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDRR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFarbmittelEing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFarbUmrechnung.Designer.vb">
+      <DependentUpon>frmFarbUmrechnung.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFarbUmrechnung.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNassTrocken.designer.vb">
+      <DependentUpon>frmNassTrocken.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNassTrocken.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQualControl.Designer.vb">
+      <DependentUpon>frmQualControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmQualControl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modColorBasis.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmBlockverarbeitungKorr.resx">
+      <DependentUpon>frmBlockverarbeitungKorr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBlockverarbeitungRefl.resx">
+      <DependentUpon>frmBlockverarbeitungRefl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChargenNuancieren.resx">
+      <DependentUpon>frmChargenNuancieren.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorBlockverarbeitung.resx">
+      <DependentUpon>frmColorBlockverarbeitung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorDrucken.resx">
+      <DependentUpon>frmColorDrucken.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorGrund.resX">
+      <DependentUpon>frmColorGrund.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorRaumBerechnung.resx">
+      <DependentUpon>frmColorRaumBerechnung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorRezepte.resx">
+      <DependentUpon>frmColorRezepte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorSuchKorr.resx">
+      <DependentUpon>frmColorSuchKorr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorthekEing.resx">
+      <DependentUpon>frmColorthekEing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConvertMisch.resx">
+      <DependentUpon>frmConvertMisch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDARF.resx">
+      <DependentUpon>frmDARF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDARZ.resx">
+      <DependentUpon>frmDARZ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDBExportCOL.resx">
+      <DependentUpon>frmDBExportCOL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDBImportCOL.resx">
+      <DependentUpon>frmDBImportCOL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDRR.resX">
+      <DependentUpon>frmDRR.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFarbmittelEing.resx">
+      <DependentUpon>frmFarbmittelEing.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFarbUmrechnung.resx">
+      <DependentUpon>frmFarbUmrechnung.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNassTrocken.resx">
+      <DependentUpon>frmNassTrocken.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQualControl.resx">
+      <DependentUpon>frmQualControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ColorCalculation\ColorCalculation.vbproj">
+      <Project>{16748774-07B4-466A-BE15-C251C4B830BB}</Project>
+      <Name>ColorCalculation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorGeneral\ColorGeneral.vbproj">
+      <Project>{123FAC32-3CD0-49BB-AEA9-45D98FF73493}</Project>
+      <Name>ColorGeneral</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorMeasure\ColorMeasure.vbproj">
+      <Project>{66458D56-3A8D-42A3-A0B2-C9F0833DEB54}</Project>
+      <Name>ColorMeasure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorParamLib\ColorParamLib.vbproj">
+      <Project>{2DB15E92-2154-4BCD-8643-C042F883342E}</Project>
+      <Name>ColorParamLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorReadWriteDaten\ColorReadWriteDaten.vbproj">
+      <Project>{7BE511BA-F44D-4132-852D-5F716D1BFBA3}</Project>
+      <Name>ColorReadWriteDaten</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorService\ColorService.vbproj">
+      <Project>{5D50EEA4-D49B-483B-891A-DC10D56C4F4C}</Project>
+      <Name>ColorService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorStructures\ColorStructures.vbproj">
+      <Project>{9A27D4D9-1710-4871-9FA7-EE5E81AF4E1E}</Project>
+      <Name>ColorStructures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneralLibrary\GeneralLibrary.vbproj">
+      <Project>{a9f3d1f4-ba26-48b8-be4d-ecbdc2d08891}</Project>
+      <Name>GeneralLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

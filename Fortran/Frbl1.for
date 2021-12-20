@@ -1,0 +1,477 @@
+C     Last change: KU 21.12.2020 17:32:27
+      LOGICAL(KIND=4) FUNCTION COTYRWRT(TYRWR1,TYRWR2)
+      USE MOTTYRW
+      TYPE(TYRWERT) ::TYRWR1,TYRWR2
+      COTYRWRT=.TRUE.
+      IF(TYRWR1%ID.NE.TYRWR2%ID) THEN
+          COTYRWRT=.FALSE.
+          RETURN
+      ENDIF
+      IF(TYRWR1%NR.NE.TYRWR2%NR) THEN
+          COTYRWRT=.FALSE.
+          RETURN
+      ENDIF
+      IF(TYRWR1%KWB.NE.TYRWR2%KWB) THEN
+          COTYRWRT=.FALSE.
+          RETURN
+      ENDIF
+      IF(TYRWR1%RETR.NE.TYRWR2%RETR) THEN
+          COTYRWRT=.FALSE.
+          RETURN
+      ENDIF
+      IF(TYRWR1%IVONA.NE.TYRWR2%IVONA) THEN
+          COTYRWRT=.FALSE.
+          RETURN
+      ENDIF
+
+      RETURN
+      END
+      SUBROUTINE GETRWRT(NWE,RSOURCE,RTARGET)
+      IMPLICIT REAL(KIND=8)(A-H,O-Z)
+      REAL(KIND=8),DIMENSION(NWE) :: RTARGET
+      REAL(KIND=4),DIMENSION(NWE) :: RSOURCE
+      DO I=1,NWE
+         RTARGET(I)=RSOURCE(I)
+      END DO
+      RETURN
+      END SUBROUTINE
+
+      SUBROUTINE GETKPF(KW,TYREDAP,QUREDAP,
+     &                 RWERP,IER)
+      USE MOSRWRT
+      USE MOTTYRW
+      USE MOTQURW
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+c      INCLUDE "PRAMR.INC"
+c      INCLUDE "SRWERT.INC"
+c      INCLUDE "TYRWERT.INC"
+c      INCLUDE "QURWERT.INC"
+c      INCLUDE "COWIN.INC"
+C
+C
+C
+      INTEGER(KIND=4)::KW
+
+      TYPE(SRWERT) RWERP
+      TYPE(TYRWERT) TYREDAP
+      TYPE(QURWERT) QUREDAP
+      CALL GETREF(TYREDAP,RWERP,IER)
+      IF(IER.NE.0) THEN
+        RETURN
+      ENDIF
+      CALL GETQUR(KW,QUREDAP,RWERP,IER)
+      RETURN
+      END
+      SUBROUTINE GETREF(TYREDAP,RWERP,IER)
+      USE MOSRWRT
+      USE MOTTYRW
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+C
+C
+C
+      TYPE(SRWERT) RWERP
+      TYPE(TYRWERT) TYREDAP
+           IER=0
+           RWERP%ID=TYREDAP%ID
+           RWERP%NR=TYREDAP%NR
+           IF (TYREDAP%RETR.NE.0.AND.TYREDAP%RETR.NE.1) THEN
+              IER=4153
+              RETURN
+           END IF
+           IF(TYREDAP%KWB.NE.1.AND.TYREDAP%KWB.NE.2) THEN
+              IER=4077
+              RETURN
+           ENDIF
+           RWERP%RETR=TYREDAP%RETR
+           RWERP%IVONA=TYREDAP%IVONA
+      RETURN
+      END
+      SUBROUTINE GETQUR(KW,QUREDAP,RWERP,IER)
+      USE MOSRWRT
+      USE MOTQURW
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+C
+C
+C
+      TYPE(SRWERT) RWERP
+      TYPE(QURWERT) QUREDAP
+      LOGICAL RWHR
+           IER=0
+           RWERP%CART=QUREDAP%CART
+           RWERP%DESTD= QUREDAP%DE(KW)
+           RWERP%IAMI=QUREDAP%IAMI
+           DO K=0,7
+              RWERP%CAMP(K)=QUREDAP%CAMP(K)
+           ENDDO
+           IF(.NOT.RWHR(RWERP%CART)) THEN
+             IER=4036
+           ENDIF
+      RETURN
+      END
+C
+C
+C
+C
+C
+      INTEGER(KIND=4) FUNCTION DIMIER(NWEL,KML,NLZL,NPQGL,MNF,NUA)
+      USE MODABST
+      USE MODMERZ
+      USE MODFARB
+      USE MOTFEHL
+      USE MODRWRZ
+      IMPLICIT NONE
+      INTEGER(KIND=4) :: NWEL
+      INTEGER(KIND=4),OPTIONAL :: KML,NLZL,NPQGL,MNF,NUA
+      INTEGER(KIND=4) :: NWS,NLS,KMS
+      DIMIER=0
+      IF(NWS().NE.NWEL) THEN
+         DIMIER=4005
+         RETURN
+      ENDIF
+      IF(PRESENT(KML)) THEN
+        IF(KML.NE.KMS()) THEN
+           DIMIER=4006
+           RETURN
+        ENDIF
+      ENDIF
+      IF(PRESENT(NPQGL)) THEN
+         IF(UBOUND(ABLEI,1).LT.NPQGL) THEN
+           DIMIER=4000
+            RETURN
+         ENDIF
+         IF(UBOUND(RD,1).NE.NWEL) THEN
+            DIMIER=4005
+            RETURN
+         ENDIF
+      ENDIF
+      IF(PRESENT(MNF)) THEN
+         IF(UBOUND(LK,1).NE.MNF) THEN
+            DIMIER=4053
+            RETURN
+         ENDIF
+      ENDIF
+      IF(PRESENT(NLZL)) THEN
+         IF(NLZL.NE.NLS()) THEN
+            DIMIER=4004
+            RETURN
+         ENDIF
+      ENDIF
+      IF(PRESENT(NUA)) THEN
+         IF(NUA.GT.UBOUND(IRETR,1)) THEN
+            DIMIER=4117
+            RETURN
+         ENDIF
+      ENDIF
+      RETURN
+      END
+
+      INTEGER (KIND=4) FUNCTION KMS()
+      USE MODWINK
+
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      KMS=KM
+      RETURN
+      END
+      INTEGER (KIND=4) FUNCTION KWS()
+      USE MODWINK
+
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      KWS=KWC
+      RETURN
+      END
+      INTEGER (KIND=4) FUNCTION KAS()
+      USE MODGKWR
+
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      KAS=KA
+      RETURN
+      END
+      REAL (KIND=8) FUNCTION AKAS()
+      USE MODGKWR
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      AKAS=AKA
+      RETURN
+      END
+
+      SUBROUTINE FABIPR(MNF,PROZ,PROB,CBA,CLA)
+C
+      IMPLICIT DOUBLE PRECISION(A-H,O-Z)
+C
+C
+      REAL(KIND=4),DIMENSION(*)::PROZ,PROB
+      DIMENSION CBA(*),CLA(*)
+
+C
+C
+C     CBA FARBMITTELPROZENTIGKEIT
+C     CLA BINDEMITTELPROZENTIGKEIT (BEZOGEN AUF BINDE+LÖSEMITTEL)
+C
+      DO J=1,MNF
+        CBA(J)=0.01*PROZ(J)
+        CLA(J)=0.01*PROB(J)
+      ENDDO
+      RETURN
+      END
+C
+C
+C
+C
+C
+C
+C
+      SUBROUTINE GETMNG(MNF,AMALT,IER)
+      USE MODFARB
+      USE MODRWRZ
+      USE MODMERZ,ONLY:JUU,ANORM,IKOR
+      IMPLICIT REAL(KIND=8)(A-H,O-Z)
+      INTEGER(KIND=4)::MNF
+      REAL(KIND=4),DIMENSION(*)::AMALT
+C
+C
+C
+C     Alte Farb-/Bindemittelmengen übernehmen
+C
+      IER=0
+      DO J=1,MNF
+        ACONA(J)=0.
+      END DO
+C
+      DO J=1,MNF
+C
+C
+C         Effektive FARB-/BINDEMITTELMENGEN
+C
+          ACONA(J)=AMALT(J)/ANORM
+C
+      ENDDO
+C
+C
+C
+C
+C
+C     KONZENTRATIONEN ZUR BERECHNUNG VON RHLF (AUS HILFSKORREKTUREN)
+C
+C
+      SUA=0.
+      DO I=1,MNF
+         CONA(I)=0.
+         SUA=SUA+ACONA(I)
+      END DO
+      IF(SUA.LE.TINY(1.)) THEN
+        IF(IKOR.EQ.0) THEN
+          SUA=TINY(1.)
+        ELSE
+          IER=4071
+          GOTO 900
+        ENDIF
+      ENDIF
+C
+      DO I=1,MNF
+         CONA(I)=ACONA(I)/SUA
+      ENDDO
+ 900  RETURN
+      END SUBROUTINE
+C
+      SUBROUTINE GETHLF(IH,DICKE,MNF,AMENG,IER)
+      USE MODFARB
+      USE MODHILF
+      USE MODMERZ,ONLY:JUN,ANORM
+
+      IMPLICIT REAL(KIND=8)(A-H,O-Z)
+      INTEGER(KIND=4)::MNF
+      REAL(KIND=4),DIMENSION(*) :: DICKE
+      REAL(KIND=4),DIMENSION(*)::AMENG
+      IER=0
+C
+C
+C     Effektive MENGEN für Hilfskorrekturen berechnen
+C 
+      DO L=1,MNF
+            ACH(L,IH)=AMENG(L)/ANORM
+      ENDDO
+C
+C
+C    
+
+C
+C     SCHICHTDICKEN HILFKORREKTUREN UEBERNEHMEN
+C
+      DO K=1,JUN
+           DIHLF(K,IH)=DICKE(K)
+      ENDDO
+C
+C
+C
+      RETURN
+      END
+
+
+C
+      SUBROUTINE GETRRR(NWE,KM,RTY,R,IER)
+C      USE MOTTYRW
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      REAL(KIND=4) :: RTY(NWE,KM)
+      DIMENSION R(NWE,*)
+C
+      IER=0
+C      IF(TYREDAM%ID.LT.0) THEN
+C         IER=4097
+C         GOTO 900
+C      ENDIF
+      DO KW=1,KM
+         DO I=1,NWE
+            R(I,KW)=RTY(I,KW)
+         ENDDO
+      ENDDO
+ 900  RETURN
+      END
+C******************************************************
+c
+C     
+C******************************************************
+C******************************************************************************
+C
+C******************************************************************************
+C
+c
+C
+
+c
+c
+      SUBROUTINE SRT000(RWERP)
+      USE MOSRWRT
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+
+c      INCLUDE "PRAMR.INC"
+c      INCLUDE "SRWERT.INC"
+      TYPE(SRWERT) RWERP
+      RWERP%ID=0
+      RWERP%NR=0
+      RWERP%RETR=0
+      RWERP%IAMI=0
+      RWERP%DESTD=0.
+      RWERP%CART='    '
+      DO I=0,7
+        RWERP%CAMP(I)=0.
+      END DO
+      RETURN
+      END SUBROUTINE
+c
+C
+      SUBROUTINE QUAKOR(CC)
+      USE MODGKWR,ONLY:CDE,GK
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      CHARACTER*1 CC
+C
+C
+C     MENUEPARAMETER FUER QUALITÄTSKONTROLLE KORRIGIEREN
+C
+      IF(CDE(1:1).EQ.'E'.OR. CDE(1:1).EQ.'S') THEN
+          CDE(1:1)=CC
+      ENDIF
+      DO KW=1,KMS()
+        IF(CDE(1:1).EQ.'D') THEN
+          GK(11,KW)=0.
+        ENDIF
+      END DO
+      RETURN
+      END SUBROUTINE
+C
+C
+C
+C
+      SUBROUTINE TSTIPRG(IPRG,IER)
+      USE MODFUNC
+      IMPLICIT NONE
+      INTEGER(KIND=4) :: IPRG,IER
+C
+C     IPRG
+C        0     FARKOR,MISCH,UNENDL
+C       97     FASDEK,FSTDEK
+C       99     FASTRA,FSTTRA
+C      100     FSTTEX
+C      111     FASFOG
+C      104     DEKDEK
+C      105     DEKTRA
+C
+      IF(IPRG.GE.97.AND.IPRG.LE.100) THEN
+         IF(KBWT.EQ.0) THEN
+            KBWT=1
+         ENDIF
+      ENDIF
+      IF(IART.LT.0.AND.IPRG.GT.10) THEN
+         IER=4031
+         GOTO 900
+      ENDIF
+      IF(KBWT.EQ.0.AND.(IPRG.EQ.97
+     &                 .OR.IPRG.EQ.98
+     &                 .OR.IPRG.EQ.99
+     &                 .OR.IPRG.EQ.100)) THEN
+         IER=4032
+         GOTO 900
+      ENDIF
+C
+C     KONTRASTFARBABSTAND
+C
+      IF(FDE.EQ.0.D0.AND.(IPRG.EQ.101.OR.IPRG.EQ.102)) THEN
+         IER=4033
+         GOTO 900
+      ENDIF
+C
+C
+C     WEISS/SCHWARZVERHAELTNIS
+C
+C
+      IF(AMWAMS.EQ.0.D0.AND.IPRG.EQ.101) THEN
+          IER=4034
+          GOTO 900
+      ENDIF
+ 900  RETURN
+      END SUBROUTINE
+      SUBROUTINE GETPAR(IPRG,PARMERK,IER)
+      USE MODFAKT
+      IMPLICIT DOUBLE PRECISION (A-H,O-Z)
+      REAL(KIND=4) PARMERK(*)
+C
+C
+C     VB setzt PARMERK(64); VB.NET setzt PARMERK(0:63)
+C
+
+C
+C
+C     MODFAKT
+C
+C
+      IER=0
+      XL=PARMERK(1)
+      XC=PARMERK(2)
+      AKCH=PARMERK(4)
+      AKE=PARMERK(5)
+      AMYGS=PARMERK(30)
+      AMYGSF=PARMERK(31)
+      AGYGS=PARMERK(32)
+      AGYGSF=PARMERK(33)
+      GL=PARMERK(6)
+      GA=PARMERK(7)
+      GB=PARMERK(8)
+      GC=PARMERK(9)
+      GH=PARMERK(10)
+      AKL94=PARMERK(11)
+      AKC94=PARMERK(12)
+      AKH94=PARMERK(13)
+      AKL2000=PARMERK(14)
+      AKC2000=PARMERK(15)
+      AKH2000=PARMERK(16)
+      kLIGHT=PARMERK(17)
+      KGLOSS=PARMERK(18)
+      DFKI=PARMERK(20)
+      RETURN
+      END
+
+
+      
+
+
+C
+
+

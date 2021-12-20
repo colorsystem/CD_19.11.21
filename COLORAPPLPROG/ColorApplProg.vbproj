@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F394903A-69B7-4420-BFE8-3A49514AF88D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>Colab.ico</ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>ColorApplProg</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <OptionCompare>Text</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>ColorApplProg</RootNamespace>
+    <StartupObject>Sub Main</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Console</MyType>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>ColorApplProgramm</ProductName>
+    <PublisherName>Unterforsthuber</PublisherName>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>Full</DebugType>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <DocumentationFile>ColorApplProg.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\bin\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DocumentationFile>ColorApplProg.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Report.4, Version=4.6.20113.54459, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="C1.Win.C1Chart.4, Version=4.0.20113.21313, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1Chart.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Chart3D.4, Version=4.0.20113.21313, Culture=neutral, PublicKeyToken=a22e16972c085838, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1Chart3D.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1FlexGrid.4, Version=4.6.20113.647, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1FlexGrid.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Report.4, Version=4.6.20113.54459, Culture=neutral, PublicKeyToken=41780e2fc605e636, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Sizer.4, Version=4.1.20113.62, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1Sizer.4.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1TrueDBGrid.4, Version=4.0.20113.61237, Culture=neutral, PublicKeyToken=75ae3fb0e2b1e0da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\ComponentOne\Studio for WinForms\bin\v4\C1.Win.C1TrueDBGrid.4.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="C1.C1Preview" />
+    <Import Include="C1.C1Report" />
+    <Import Include="C1.Win" />
+    <Import Include="C1.Win.C1TrueDBGrid" />
+    <Import Include="ColorBasisProg" />
+    <Import Include="ColorCalculation" />
+    <Import Include="ColorGeneral" />
+    <Import Include="colorgeneral.ColorAllgLib" />
+    <Import Include="colorgeneral.ColorHilfLib" />
+    <Import Include="ColorGeneral.ColorMathLib" />
+    <Import Include="ColorGeneral.SQLQueryLib" />
+    <Import Include="ColorlicensesKey" />
+    <Import Include="ColorMeasure" />
+    <Import Include="ColorParamLIB" />
+    <Import Include="ColorParamLib.DBHilfProgramme" />
+    <Import Include="ColorParamLIB.FrbHilfProgramme" />
+    <Import Include="ColorReadWriteDaten" />
+    <Import Include="ColorService" />
+    <Import Include="ColorService.handlecheckrad" />
+    <Import Include="ColorService.handlerezC1group" />
+    <Import Include="ColorService.handlerezC1screen" />
+    <Import Include="ColorService.handlerezgroup" />
+    <Import Include="ColorSettingsNET" />
+    <Import Include="ColorStructures" />
+    <Import Include="ColorTestCalculation" />
+    <Import Include="GeneralLibrary" />
+    <Import Include="GeneralLibrary.auxiliary" />
+    <Import Include="GeneralLibrary.bitsandbytes" />
+    <Import Include="GeneralLibrary.databasisandtables" />
+    <Import Include="GeneralLibrary.Mathematic" />
+    <Import Include="GeneralLibrary.sqlQueryLib" />
+    <Import Include="GeneralLibraryMathematic" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.OleDb" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Drawing.Drawing2D" />
+    <Import Include="System.Drawing.Printing" />
+    <Import Include="System.IO" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Math" />
+    <Import Include="System.Reflection" />
+    <Import Include="System.Security.AccessControl" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Serialization.Configuration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmColorMDI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmColorUse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modColorProg.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\MyApplication.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MyApplication.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyResources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MySettings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>MySettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frmColorMDI.resx">
+      <DependentUpon>frmColorMDI.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmColorUse.resx">
+      <DependentUpon>frmColorUse.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="My Project\MyResources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>MyResources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\MyApplication.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>MyApplication.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GeneralLibrary\GeneralLibrary.vbproj">
+      <Project>{A9F3D1F4-BA26-48B8-BE4D-ECBDC2D08891}</Project>
+      <Name>GeneralLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorBasisProg\ColorBasisProg.vbproj">
+      <Project>{08A1206C-4138-4533-A406-E26BFF6BE4AB}</Project>
+      <Name>ColorBasisProg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorCalculation\ColorCalculation.vbproj">
+      <Project>{16748774-07B4-466A-BE15-C251C4B830BB}</Project>
+      <Name>ColorCalculation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorGeneral\ColorGeneral.vbproj">
+      <Project>{123FAC32-3CD0-49BB-AEA9-45D98FF73493}</Project>
+      <Name>ColorGeneral</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorGetKey\ColorGetKey.vbproj">
+      <Project>{317DAD44-66A0-41AC-BD93-2995A1824CE3}</Project>
+      <Name>ColorGetKey</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorlicensesKey\ColorlicensesKey.vbproj">
+      <Project>{84E55716-F205-4F09-81A6-0EBF64A0C939}</Project>
+      <Name>ColorlicensesKey</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorMeasure\ColorMeasure.vbproj">
+      <Project>{66458D56-3A8D-42A3-A0B2-C9F0833DEB54}</Project>
+      <Name>ColorMeasure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorParamLib\ColorParamLib.vbproj">
+      <Project>{2DB15E92-2154-4BCD-8643-C042F883342E}</Project>
+      <Name>ColorParamLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorReadWriteDaten\ColorReadWriteDaten.vbproj">
+      <Project>{7BE511BA-F44D-4132-852D-5F716D1BFBA3}</Project>
+      <Name>ColorReadWriteDaten</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorService\ColorService.vbproj">
+      <Project>{5D50EEA4-D49B-483B-891A-DC10D56C4F4C}</Project>
+      <Name>ColorService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorSetKey\ColorSetKey.vbproj">
+      <Project>{939804D8-6B0A-4259-9B17-F4301568F829}</Project>
+      <Name>ColorSetKey</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorSettingsNET\ColorSettingsNET\ColorSettingsNET.vbproj">
+      <Project>{34C84439-B57B-49F9-BA79-437EDFD7A2E7}</Project>
+      <Name>ColorSettingsNET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorStructures\ColorStructures.vbproj">
+      <Project>{9A27D4D9-1710-4871-9FA7-EE5E81AF4E1E}</Project>
+      <Name>ColorStructures</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Byksic32.dll" />
+    <Content Include="bykusbcom.dll" />
+    <Content Include="Colab.ico" />
+    <Content Include="COLORCRP.dll" />
+    <Content Include="COLPrgm.ico" />
+    <Content Include="FarbAbst.dll" />
+    <Content Include="FARBEN.dll" />
+    <Content Include="Farbqual.dll" />
+    <Content Include="farbumre.dll" />
+    <Content Include="Farkoord.dll" />
+    <Content Include="GrdDaten.dll" />
+    <Content Include="Mischen.dll" />
+    <Content Include="RezFarb.dll" />
+    <Content Include="RezFawrt.dll" />
+    <Content Include="Rezraum.dll" />
+    <Content Include="Rezumre.dll" />
+    <Content Include="RwertMit.dll" />
+    <Content Include="Splidll.dll" />
+    <Content Include="Utility.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

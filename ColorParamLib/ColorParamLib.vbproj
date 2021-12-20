@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2DB15E92-2154-4BCD-8643-C042F883342E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>ColorParamLIB</AssemblyName>
+    <OutputType>Library</OutputType>
+    <StartupObject>BCSwinParamLIB.DataBaseMod</StartupObject>
+    <AssemblyMajorVersion>2</AssemblyMajorVersion>
+    <AssemblyMinorVersion>3</AssemblyMinorVersion>
+    <AssemblyRevisionNumber>11</AssemblyRevisionNumber>
+    <GenerateRevisionNumber>False</GenerateRevisionNumber>
+    <AssemblyCompanyName>BASF</AssemblyCompanyName>
+    <StartWithIE>False</StartWithIE>
+    <RootNamespace>ColorParamLIB</RootNamespace>
+    <MyType>Windows</MyType>
+    <OptionCompare>Text</OptionCompare>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionInfer>On</OptionInfer>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DefineDebug>True</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32 = True</DefineConstants>
+    <StartArguments>
+    </StartArguments>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DocumentationFile>ColorParamLIB.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>Full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>False</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32 = True</DefineConstants>
+    <StartArguments>
+    </StartArguments>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DocumentationFile>ColorParamLIB.xml</DocumentationFile>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="ColorGeneral" />
+    <Import Include="ColorGeneral.bitsandbytes" />
+    <Import Include="ColorGeneral.ColorAllglib" />
+    <Import Include="Colorgeneral.Colorhilflib" />
+    <Import Include="ColorParamLIB" />
+    <Import Include="colorparamlib.DBHilfprogramme" />
+    <Import Include="colorparamlib.frbhilfprogramme" />
+    <Import Include="ColorStructures" />
+    <Import Include="GeneralLibrary.Auxiliary" />
+    <Import Include="GeneralLibrary.BitsAndBytes" />
+    <Import Include="GeneralLibrary.Databasisandtables" />
+    <Import Include="GeneralLibrary.mathematic" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Data.OleDb" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Drawing.Design" />
+    <Import Include="System.Drawing.Drawing2D" />
+    <Import Include="System.IO" />
+    <Import Include="System.Linq" />
+    <Import Include="System.math" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AufbauParameters.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DBHilfProgramme.vb" />
+    <Compile Include="FrbHilfProgramme.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GraphicHilfProgramme.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\MyApplication.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MyApplication.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MySettings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>MySettings.settings</DependentUpon>
+    </Compile>
+    <None Include="My Project\MyApplication.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>MyApplication.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.vb</LastGenOutput>
+    </None>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\MyResources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ColorGeneral\ColorGeneral.vbproj">
+      <Project>{123FAC32-3CD0-49BB-AEA9-45D98FF73493}</Project>
+      <Name>ColorGeneral</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ColorStructures\ColorStructures.vbproj">
+      <Project>{9A27D4D9-1710-4871-9FA7-EE5E81AF4E1E}</Project>
+      <Name>ColorStructures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeneralLibrary\GeneralLibrary.vbproj">
+      <Project>{a9f3d1f4-ba26-48b8-be4d-ecbdc2d08891}</Project>
+      <Name>GeneralLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

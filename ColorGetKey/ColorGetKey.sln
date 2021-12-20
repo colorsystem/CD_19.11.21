@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ColorGetKey", "ColorGetKey.vbproj", "{317DAD44-66A0-41AC-BD93-2995A1824CE3}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ColorlicensesKey", "..\ColorlicensesKey\ColorlicensesKey.vbproj", "{84E55716-F205-4F09-81A6-0EBF64A0C939}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{317DAD44-66A0-41AC-BD93-2995A1824CE3}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{317DAD44-66A0-41AC-BD93-2995A1824CE3}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{317DAD44-66A0-41AC-BD93-2995A1824CE3}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{317DAD44-66A0-41AC-BD93-2995A1824CE3}.Debug|x86.ActiveCfg = Debug|x86
+		{317DAD44-66A0-41AC-BD93-2995A1824CE3}.Debug|x86.Build.0 = Debug|x86
+		{317DAD44-66A0-41AC-BD93-2995A1824CE3}.Release|Any CPU.ActiveCfg = Release|x86
+		{317DAD44-66A0-41AC-BD93-2995A1824CE3}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{317DAD44-66A0-41AC-BD93-2995A1824CE3}.Release|Mixed Platforms.Build.0 = Release|x86
+		{317DAD44-66A0-41AC-BD93-2995A1824CE3}.Release|x86.ActiveCfg = Release|x86
+		{317DAD44-66A0-41AC-BD93-2995A1824CE3}.Release|x86.Build.0 = Release|x86
+		{84E55716-F205-4F09-81A6-0EBF64A0C939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84E55716-F205-4F09-81A6-0EBF64A0C939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84E55716-F205-4F09-81A6-0EBF64A0C939}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{84E55716-F205-4F09-81A6-0EBF64A0C939}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{84E55716-F205-4F09-81A6-0EBF64A0C939}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{84E55716-F205-4F09-81A6-0EBF64A0C939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84E55716-F205-4F09-81A6-0EBF64A0C939}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84E55716-F205-4F09-81A6-0EBF64A0C939}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{84E55716-F205-4F09-81A6-0EBF64A0C939}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{84E55716-F205-4F09-81A6-0EBF64A0C939}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

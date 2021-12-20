@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A27D4D9-1710-4871-9FA7-EE5E81AF4E1E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>ColorStructures</AssemblyName>
+    <OutputType>Library</OutputType>
+    <AssemblyMajorVersion>2</AssemblyMajorVersion>
+    <AssemblyMinorVersion>3</AssemblyMinorVersion>
+    <AssemblyRevisionNumber>6</AssemblyRevisionNumber>
+    <GenerateRevisionNumber>False</GenerateRevisionNumber>
+    <AssemblyCompanyName>BASF</AssemblyCompanyName>
+    <RootNamespace>ColorStructures</RootNamespace>
+    <MyType>Windows</MyType>
+    <OptionCompare>Text</OptionCompare>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <OptionInfer>On</OptionInfer>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DefineDebug>True</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>
+    </DefineConstants>
+    <StartArguments>
+    </StartArguments>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DocumentationFile>ColorStructures.xml</DocumentationFile>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>Full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>False</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>
+    </DefineConstants>
+    <StartArguments>
+    </StartArguments>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>ColorStructures.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="GeneralLibrary" />
+    <Import Include="GeneralLibrary.Mathematic" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllParameters.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AnglExist.vb" />
+    <Compile Include="Colorant.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Colorants.vb" />
+    <Compile Include="ColorAmount.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuParameters.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\MyApplication.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MyApplication.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MySettings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>MySettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="OpticalData.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CurveRef.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CurvesRef.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CurvesRefGrp.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParamSignAll.vb" />
+    <Compile Include="Sign.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MeasParameters.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MixingParameter.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NormIlluminat.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NormIlluminats.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ParamSign.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="QuControls.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Recipe.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Recipes.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RecipesGrp.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RefValue.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RefValues.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RefValuesGrp.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UserParameters.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Values.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValuesAux.vb" />
+    <Compile Include="ValuesGrp.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValuesGrps.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValuesGrpsAssign.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValuesGrpsAssigns.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AngGeo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AngGeos.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="My Project\MyApplication.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>MyApplication.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\MySettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>MySettings.Designer.vb</LastGenOutput>
+    </None>
+    <AppDesigner Include="My Project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\MyResources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GeneralLibrary\GeneralLibrary.vbproj">
+      <Project>{a9f3d1f4-ba26-48b8-be4d-ecbdc2d08891}</Project>
+      <Name>GeneralLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
